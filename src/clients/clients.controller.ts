@@ -3,14 +3,15 @@ import {
   Get,
   Post,
   Body,
-  Patch,
   Param,
   Delete,
+  Query,
+  Put,
 } from '@nestjs/common';
 import { ClientsService } from './clients.service';
 import { RequestClientDto } from './dto/request-client.dto';
 import { ResponseClientDTO } from './dto/response-client.dto';
-import { ClientEntity } from './entities/client.entity';
+// import { ClientEntity } from './entities/client.entity';
 // import { ResponseClientDto } from './dto/response-client.dto';
 
 @Controller('clients')
@@ -25,10 +26,21 @@ export class ClientsController {
   }
 
   @Get()
-  async findAll() {
-    const clients = await this.clientsService.findAll();
+  async findAll(@Query('page') page: string, @Query('limit') limit: string) {
+    const currentPage = parseInt(page) || 1;
+    const perPage = parseInt(limit) || 8;
 
-    return clients.map((client: ClientEntity) => new ResponseClientDTO(client));
+    return await this.clientsService.findAll(currentPage, perPage);
+  }
+
+  @Get('by-ids')
+  async findByIds(@Query('ids') ids: string) {
+    const parsedIds = ids
+      .split(',')
+      .map(Number)
+      .filter((id) => !isNaN(id));
+
+    return await this.clientsService.findByIds(parsedIds);
   }
 
   @Get(':id')
@@ -42,7 +54,7 @@ export class ClientsController {
     return new ResponseClientDTO(client);
   }
 
-  @Patch(':id')
+  @Put(':id')
   async update(
     @Param('id') id: string,
     @Body() requestClientDto: Partial<RequestClientDto>,
