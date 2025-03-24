@@ -98,4 +98,54 @@ Documentação com Swagger
 ```
 acesse a documentação pelo seu navegador no seguinte link http://localhost:3000/api#/
 ```
-  
+
+***Arquitetura do Sistema***
+
+- Front-End (React + Vite):
+```
+Front-End (React + Vite):
+
+O código será armazenado no GitHub e compilado com Vite.
+
+Após a compilação, será enviado para um bucket S3.
+
+O CloudFront fornecerá cache de conteúdo e distribuição global rápida.
+```
+- Back-End (Nest.js + PostgreSQL + AWS ECS/EC2):
+```
+Back-End (Nest.js + PostgreSQL + AWS ECS/EC2):
+
+O back-end será containerizado com Docker e enviado para Amazon ECS para orquestração de containers (ou EC2, se preferir).
+
+O banco de dados será hospedado no Amazon RDS (PostgreSQL) para alta disponibilidade e backups fáceis.
+```
+- Integração e Deploy (CI/CD):
+```
+GitHub Actions realizará build e testes.
+
+Após aprovação, o código será integrado ao AWS CodePipeline para deploy automático.
+```
+- CodePipeline:
+```
+Baixar o código do GitHub.
+
+Executar testes automatizados.
+
+Build da aplicação e push para ECS ou deploy direto para EC2.
+
+Deploy para AWS.
+```
+
+- Monitoramento e Escalabilidade:
+
+```
+CloudWatch será usado para monitoramento e logs.
+
+Auto Scaling no ECS ajustará os recursos automaticamente conforme a demanda.
+
+O código será armazenado no GitHub e compilado com Vite.
+
+Após a compilação, será enviado para um bucket S3.
+
+O CloudFront fornecerá cache de conteúdo e distribuição global rápida.
+```
