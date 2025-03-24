@@ -74,5 +74,28 @@ Clique em “Install” e aguarde o processo de instalação ser concluído.
   npm install
   ```
 
- - 
+ - Configutando banco de dados para o nestjs funcionar
+```
+- Rode o comando docker compose up --build
+- Depois do conteiner subir acesse http://localhost:5050/login?next=/ no seu navegador 
+- Utliede de login: admin@teddy.com  senha: pgadminteddy
+- Depois de logar clique com o botão direito em servers -> regiter -> server
+- Em Geral coloque em name um nome sua escolhar
+- Para a aba conection siga as imagem abaixo
+
+![image](https://github.com/user-attachments/assets/b8244ee0-d059-49b1-ad06-e025fb5116e4)
+
+você tem que setar a senha para postgres
+```
+
+rodar a api
+```
+rode novamente o comado docker compose up --build quando o docker para de subir a api estata rodando na porta 3000
+```
+
+Documentação com Swagger
+
+```
+acesse a documentação pelo seu navegador no seguinte link http://localhost:3000/api#/
+```
   
