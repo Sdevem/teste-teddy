@@ -1,98 +1,78 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+Quanto tempo levaria?
+```
+A estimativa para a conclusão desta atividade é de uma sprint de 2 semanas, dividida da seguinte forma:
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+4-5 dias para o Front-End (React + Vite).
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+5-6 dias para o Back-End (Nest.js, PostgreSQL e Dockerização).
 
-## Description
+5-6 dias para a Integração com AWS e Dockerização.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+3-4 dias para Testes (fase de QA).
+```
+Quantos desenvolvedores/Qual a senioridade dos desenvolvedores?
+```
+1 Desenvolvedor Front-End (React + Vite): Nível Pleno-Sênior.
 
-## Project setup
+1 Desenvolvedor Back-End (Nest.js, PostgreSQL, Dockerização): Nível Pleno-Sênior.
 
-```bash
-$ npm install
+1 Desenvolvedor Full-Stack (integração com AWS, segurança e escalabilidade): Nível Sênior.
+
+1 Tester (QA): Nível Pleno-Sênior.
 ```
 
-## Compile and run the project
+Justificativa da senioridade
+```
+O Front-End e o Back-End devem ser Pleno-Sêniores devido à complexidade das tecnologias envolvidas.
 
-```bash
-# development
-$ npm run start
+O Full-Stack deve ser Sênior para liderar a integração com AWS, além de garantir segurança e escalabilidade.
 
-# watch mode
-$ npm run start:dev
+O Tester deve ter nível Pleno-Sênior para garantir uma fase de QA eficaz e abrangente.
 
-# production mode
-$ npm run start:prod
+Essas funções e prazos foram definidos com base na complexidade e nas responsabilidades de cada área.
+```
+Rodar a Aplicação 
+
+- Clone o repositorio
+```
+https://github.com/Sdevem/teste-teddy.git
+cd teste-teddy
+```
+- caso não tenha instaldo o Docker siga os seguintes passos
+- Baixar o docker
+```
+Baixando o Docker no Windows
+Para baixar o Docker no Windows, você deve acessar o site oficial do Docker Hub em https://hub.docker.com/editions/community/docker-ce-desktop-windows/ e clicar no botão “Download Docker Desktop for Windows”. O download iniciará automaticamente.
+
+Depois de baixado, execute o Docker install, que terá o nome “Docker Desktop Installer.exe”. O instalador guiará você pelas próximas etapas para concluir a instalação do Docker em seu sistema.
+
+Baixando o Docker no macOS
+Para baixar o Docker no macOS, você deve acessar o site oficial do Docker Hub em https://hub.docker.com/editions/community/docker-ce-desktop-mac/ e clicar no botão “Download Docker Desktop for macOS”. O download iniciará automaticamente.
+
+Depois de baixado, abra o arquivo “.dmg” e arraste o ícone do Docker para a pasta “Applications”. Depois de mover o Docker para a pasta, abra o aplicativo e siga as instruções para completar a instalação.
+
+Baixando o Docker no Linux
+Para baixar o Docker no Linux, você deve acessar o site oficial do Docker Hub em https://docs.docker.com/get-docker/ e escolher a versão do Docker que melhor se adequa ao seu sistema. A partir daí, siga as instruções do site para baixar e instalar o Docker em seu sistema.
+
+Concluído o download, você tem o Docker pronto para ser instalado. Próxima etapa: Instalando o Docker.
+```
+  
+- instalar o docker
+```
+Agora que você já baixou o Docker, vamos seguir para a instalação. Para realizar o processo de instalação, siga o passo a passo abaixo:
+
+Execute o arquivo de instalação que você baixou anteriormente;
+Aceite os termos e condições de uso;
+Escolha uma pasta de destino para a instalação do Docker;
+Selecione os componentes que deseja instalar, como o Docker Engine e o Docker Compose;
+Selecione as opções de configuração desejadas, como a criação de atalhos para o Docker;
+Clique em “Install” e aguarde o processo de instalação ser concluído.
 ```
 
-## Run tests
+- Instalando dependencias
+  ```
+  npm install
+  ```
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+ - 
+  
